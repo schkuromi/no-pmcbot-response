@@ -24,14 +24,14 @@ class Mod implements IPostSptLoadMod
         const responseConfig: IPmcChatResponse = configServer.getConfig<IPmcChatResponse>(ConfigTypes.PMC_CHAT_RESPONSE);
 
         // change to response chance to config values
-        responseConfig.killer = this.modConfig.killedABotResponseChancePercent;
-        responseConfig.victim = this.modConfig.diedToABotResponseChancePercent;
+        responseConfig.killer.responseChancePercent = this.modConfig.killedABotResponseChancePercent;
+        responseConfig.victim.responseChancePercent = this.modConfig.diedToABotResponseChancePercent;
 
         // if debug, log values
         if (this.modConfig.debug)
         {
-            console.log("[DEBUG] [SCHKRM] PMC Bot Response Chance - Killer set to:",responseConfig.killer)
-            console.log("[DEBUG] [SCHKRM] PMC Bot Response Chance - Victim set to:",responseConfig.victim)
+            console.log("[DEBUG] [SCHKRM] PMC Bot Response Chance - Killer set to:",responseConfig.killer.responseChancePercent)
+            console.log("[DEBUG] [SCHKRM] PMC Bot Response Chance - Victim set to:",responseConfig.victim.responseChancePercent)
         }
 
         // announce mod loaded

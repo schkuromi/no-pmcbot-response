@@ -1,6 +1,6 @@
 {
-    "killedABotResponseChancePercent":0,
-    "diedToABotResponseChancePercent":0,
+    "killedABotResponseChancePercent": 0,
+    "diedToABotResponseChancePercent": 0,
 
-    "debug":false
+    "debug": false
 }
